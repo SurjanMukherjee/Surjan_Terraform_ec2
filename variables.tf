@@ -10,9 +10,10 @@ variable "instance_type" {
   default     = "t2.micro"   
 }
 
-variable "key_name" {
+variable "Surjan_Key" {
   description = "Name of the existing key pair to use for EC2"
   type        = string
   default     = "surjan1"
 }
+
 
