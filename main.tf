@@ -38,7 +38,7 @@ resource "aws_security_group" "ec2_sg" {
 
 # EC2 Instance
 resource "aws_instance" "ubuntu_ec2" {
-  ami           = "ami-044415bb13eee2391" # ✅ Ubuntu 22.04 LTS for ap-south-1
+  ami           = data.aws_ami.ubuntu_2204.id 
   instance_type = var.instance_type
   key_name      = var.key_name
 
@@ -48,3 +48,4 @@ resource "aws_instance" "ubuntu_ec2" {
     Name = "Surjan Terraform-Ubuntu-EC2"
   }
 }
+
