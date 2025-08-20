@@ -40,7 +40,7 @@ resource "aws_security_group" "ec2_sg" {
 resource "aws_instance" "ubuntu_ec2" {
   ami           = data.aws_ami.ubuntu_2204.id 
   instance_type = var.instance_type
-  key_name      = var.key_name
+  key_name      = var.Surjan_Key
 
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
@@ -48,4 +48,5 @@ resource "aws_instance" "ubuntu_ec2" {
     Name = "Surjan Terraform-Ubuntu-EC2"
   }
 }
+
 
