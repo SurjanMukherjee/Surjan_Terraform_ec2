@@ -18,6 +18,7 @@ provider "aws" {
 }
 
 provider "aws" {
-  region = "eu-west-2" # Change to your assigned region
+  region = "eu-west-2" 
 }
+
 
